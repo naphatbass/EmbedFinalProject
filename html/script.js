@@ -24,11 +24,11 @@ const APPID = "ConnectionTest";
 
      microgear.on('message', function(topic,data) {
         if(parseFloat(data)<1){
-         document.getElementById("Status").innerHTML =  "Room is empty.";
-         microgear.chat(thing1,"OFF");
+         document.getElementById("Status").innerHTML =  "Pressed";
+         microgear.chat(thing1,"Detect Pressed");
         }else if(parseFloat(data)>=1){
-          document.getElementById("Status").innerHTML =  "Detected!"; 
-          microgear.chat(thing1,"ON");
+          document.getElementById("Status").innerHTML =  "Released"; 
+          microgear.chat(thing1,"Detect released");
         }
         console.log(data);
     });
