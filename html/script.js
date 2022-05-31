@@ -23,14 +23,9 @@ const APPID = "ConnectionTest";
 
 
      microgear.on('message', function(topic,data) {
-        if(parseFloat(data)<1){
-         document.getElementById("Status").innerHTML =  "Pressed";
-         microgear.chat(thing1,"Detect Pressed");
-        }else if(parseFloat(data)>=1){
-          document.getElementById("Status").innerHTML =  "Released"; 
-          microgear.chat(thing1,"Detect released");
-        }
-        console.log(data);
+      document.getElementById("Status").innerHTML =  "Sensor Status : "+data;
+      microgear.chat(thing1,"Detect data");
+      console.log(data);
     });
 
     microgear.on('connected', function() {

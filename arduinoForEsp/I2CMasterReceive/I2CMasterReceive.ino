@@ -6,8 +6,8 @@ const char* ssid     = "BASS";
 const char* password = "uwiz8455";
 
 #define APPID   "ConnectionTest"
-#define KEY     "zU6E7PNF4PxoWNs"
-#define SECRET  "LtIQNOri7vjQS0pfsRgAHtHhK"
+#define KEY     "qYy3f3Nu2oURrrw"
+#define SECRET  "CqwAOGgYvQJfJWzacgBAXTpAy"
 
 #define ALIAS   "esp"
 #define TargetWeb "htmlKey2"
@@ -76,8 +76,7 @@ void setup()
   Wire.begin();
  
 }
-char button_state='0';
- 
+String distance="";
 void loop()
 {
   /*if(microgear.connected()) 
@@ -92,15 +91,14 @@ void loop()
   }
   */
 
-  Wire.requestFrom(1, 7);    // request 7 bytes from peripheral device #1
+  Wire.requestFrom(1, 20);    // request 7 bytes from peripheral device #1
 
   while (Wire.available()) { // peripheral may send less than requested
     char c = Wire.read(); // receive a byte as character
     Serial.print(c);         // print the character
-    button_state=c;
+    distance+=c;
   }
-  Serial.println();
-  if(button_state=='0')microgear.chat(TargetWeb,"0");
-  else microgear.chat(TargetWeb,"1");
-  delay(1000);
+  microgear.chat(TargetWeb,distance);
+  distance="";
+  delay(500);
 }

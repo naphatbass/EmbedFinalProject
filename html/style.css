@@ -9,4 +9,15 @@ width: 100%;
 #ProjectName {
     font-family: "Poppins", sans-serif;
     width: 100%;
+    padding: 2.5%;
+}
+
+#Status{
+    font-family: "Poppins", sans-serif;
+    padding: 2.5%;
+}
+
+#connected_NETPIE{
+    font-family: "Poppins", sans-serif;
+    padding: 2.5%;
 }
