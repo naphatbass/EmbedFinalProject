@@ -1,9 +1,9 @@
-const APPID = "ConnectionTest";
+    const APPID = "ConnectionTest";
     const KEY = "VAIZiRoq8FTak5K";
     const SECRET = "ubB65nfQRoyXWr0umxPPPJ9ZX";
 
     const ALIAS = "htmlKey2";         //  ชื่อตัวเอง
-    const thing1 = "esp";          //  ชื่อเพื่อนที่จะคุย
+    const thing1 = "esp8266x";          //  ชื่อเพื่อนที่จะคุย
 
   function switchPress(logic){
     if(logic == 1 ){

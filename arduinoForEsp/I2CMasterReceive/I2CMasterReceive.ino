@@ -91,7 +91,7 @@ void loop()
   }
   */
 
-  Wire.requestFrom(1, 20);    // request 7 bytes from peripheral device #1
+  Wire.requestFrom(1, 30);    // request 7 bytes from peripheral device #1
 
   while (Wire.available()) { // peripheral may send less than requested
     char c = Wire.read(); // receive a byte as character
